@@ -95,13 +95,13 @@ section:last-child{margin-bottom: 150px;}
 
 
 
-.section2{width: 100%; min-height: 400; aspect-ratio: 1920/605; background: url(../img/main/section2_bg.png); display: flex; align-items: center; flex-direction: column; padding-bottom: 50px;}
-.s2title{text-align: center; padding:56px 0 40px;}
-.togglebox{display: flex; gap: 10px; position: absolute; top: -60px; right: 5px; cursor: pointer;}
+.section2{width: 100%; /* min-height: 400; aspect-ratio: 1920/605; *//*  height: clamp(400px,45vw,605px); */ background: url(../img/main/section2_bg.png); display: flex; align-items: center; flex-direction: column; padding-bottom: 2.6vw;}
+.s2title{text-align: center; padding:2.9vw 0 2vw;}
+/* .togglebox{display: flex; gap: 10px; position: absolute; top: -60px; right: 5px; cursor: pointer;} */
 .position{position: relative;}   
-.cardBox{display: flex; gap: 1.5%; max-width:1100px; width: 90vw; overflow-x: hidden; position: relative; transition: none;}
+.cardBox{display: flex; gap: 1.5%; max-width:1100px; width: 90vw; /* overflow-x: hidden; */ position: relative; transition: none;}
 /* 추천책 여러개로 늘리고 토글로 넘길때 쓰려고 overflow hidden 이랑 width 줌 */
-.cardBox .card{/* width: 337px;  height: auto;*/ border-radius: 8px; background: rgba(255, 255, 255, 0.6); display: flex;/*  align-items: center;  justify-content: center;*/ border: 1px solid rgba(185,185,185, 0.4); transition: 0.3s; flex: 0 0 32%; aspect-ratio: 337/425; height: 80%; position: relative; perspective: 1000px; }
+.cardBox .card{/* width: 337px;  height: auto;*/ border-radius: 8px; background: rgba(255, 255, 255, 0.6); display: flex; border: 1px solid rgba(185,185,185, 0.4); transition: 0.3s; flex: 0 0 32%; aspect-ratio: 337/425; height: 80%; position: relative; perspective: 1000px; }
 /* .cardBox .card img{width: 80%; height: auto; margin: 35px 47px;} */
 
 .cardBox:hover .card{transform: scale(0.9);}
@@ -119,11 +119,11 @@ backface-visibility: hidden; transition: .3s; position: absolute; top: 0; left: 
 .card .back .bookinfo{display: flex; gap: 9px; }
 .card .back .bookinfo figure{width: 83px; height: auto; display: flex; justify-content: center; align-items: center;}
 .card .back .bookinfo figure img{width: 100%; height: auto;}
-.card .back .bookinfo .textinfo{}
+.card .back .bookinfo .textinfo{ border: 1px solid #000;}
 .card .back .bookinfo .textinfo .line{font-size: 14px;margin-bottom: 5px; display: flex; gap: 10px;}
-.card .back .bookinfo .textinfo .line:first-child{font-size: 16px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.card .back .bookinfo .textinfo .line:first-child{font-size: 16px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 80%; border: 1px solid red;}
 .card .back .bookinfo .textinfo .line:nth-child(2){margin-top: 2px;}
-.card .back .textoutline{width: 305px; overflow: hidden;  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 11; white-space: normal; margin: 22px 0px; font-size: 15px; font-weight: 300; line-height: 140%; color: #222;}
+.card .back .textoutline{/* width: 305px; */ width: 90%; overflow: hidden;  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 11; white-space: normal; margin: 22px 0px; font-size: 15px; font-weight: 300; line-height: 140%; color: #222; word-break: break-all; }
 
 
 
@@ -196,6 +196,23 @@ footer > p{font-size: 14px; color: #fff; width: 378px;}
   .section2 .cardBox .card{width: 30vw; height: auto;}
   .section2 .cardBox .card img{/* width: 80%; */}
 
+
+
+  .card .back .textoutline{-webkit-line-clamp: 7;}
+/* 
+.card .back{backface-visibility: hidden; transition: .3s; position: absolute; top: 0; left: 0;  margin: 18px 0 0 19px;  transform: rotateY(180deg);}
+.card .back .bookinfo{display: flex; gap: 9px; }
+.card .back .bookinfo figure{width: 83px; height: auto; display: flex; justify-content: center; align-items: center;}
+.card .back .bookinfo figure img{width: 100%; height: auto;}
+.card .back .bookinfo .textinfo{}
+.card .back .bookinfo .textinfo .line{font-size: 14px;margin-bottom: 5px; display: flex; gap: 10px;}
+.card .back .bookinfo .textinfo .line:first-child{font-size: 16px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.card .back .bookinfo .textinfo .line:nth-child(2){margin-top: 2px;}
+.card .back .textoutline{overflow: hidden;  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 11; white-space: normal; margin: 22px 0px; font-size: 15px; font-weight: 300; line-height: 140%; color: #222;}
+
+ */
+  
+
   /* .section3{flex-wrap: wrap; height: auto;  justify-content: center; gap: 10px;} */
   .section3{flex-direction: column; height: auto;  align-items: center; gap: 10px;}
   .section3 .s3left{width: 690px; }
@@ -219,6 +236,15 @@ footer > p{font-size: 14px; color: #fff; width: 378px;}
   .s2title{text-align:left; padding:56px 0 40px 70px; width: 100%;}
 /*   .section2{padding-bottom: 110px;}
   .togglebox{display: flex; gap: 10px; position: absolute; top:auto; bottom: -60px; right: 5px; cursor: pointer;} */
+
+.card{border: 1px solid black;}
+.card .back{border: 1px solid red;}
+.card .back .textinfo{width: 94%;}
+.card .back .bookinfo figure{display: none;}
+.card .back .textoutline{display: none;}
+
+
+
 
 
 .section3{padding:0 10px; }    /* 브라우저에 너무 붙어서 패딩줌 */

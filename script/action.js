@@ -31,7 +31,7 @@ $('.toggleL').click(function(){
     }
 }); */
 
-
+/* 
 const cardWidth = 337 + 18; // 카드 너비 + 간격
 
 // 오른쪽 버튼: 무한 다음
@@ -54,3 +54,5 @@ $('.toggleL').click(function() {
     // 3. 다시 0 위치로 부드럽게 당겨옴
     $('.cardBox').stop().animate({ left: 0 }, 500);
 });
+
+ */
