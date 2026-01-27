@@ -115,14 +115,15 @@ backface-visibility: hidden; transition: .3s; position: absolute; top: 0; left: 
 .card .front > figure{height: 90%; width: auto; }
 .card .front > figure > img{height: 100%;}
 
-.card .back{backface-visibility: hidden; transition: .3s; position: absolute; top: 0; left: 0;  margin: 18px 0 0 19px;  transform: rotateY(180deg);}
-.card .back .bookinfo{display: flex; gap: 9px; }
+.card .back{backface-visibility: hidden; transition: .3s; position: absolute; top: 0; left: 0;  margin: 18px 0 0 19px;  transform: rotateY(180deg); width: 100%;}
+.card .back .bookinfo{display: flex; gap: 9px; width: 88%;}
 .card .back .bookinfo figure{width: 83px; height: auto; display: flex; justify-content: center; align-items: center;}
 .card .back .bookinfo figure img{width: 100%; height: auto;}
-.card .back .bookinfo .textinfo{ border: 1px solid #000;}
-.card .back .bookinfo .textinfo .line{font-size: 14px;margin-bottom: 5px; display: flex; gap: 10px;}
-.card .back .bookinfo .textinfo .line:first-child{font-size: 16px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 80%; border: 1px solid red;}
+.card .back .bookinfo .textinfo{width: calc(100% - 92px);}
+.card .back .bookinfo .textinfo .line{font-size: 14px;margin-bottom: 5px; display: flex; gap: 10px; width: 100%;  }
+.card .back .bookinfo .textinfo .line:first-child{font-size: 16px; font-weight: 600;}
 .card .back .bookinfo .textinfo .line:nth-child(2){margin-top: 2px;}
+.card .back .bookinfo .textinfo .line span{display: block;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .card .back .textoutline{/* width: 305px; */ width: 90%; overflow: hidden;  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 11; white-space: normal; margin: 22px 0px; font-size: 15px; font-weight: 300; line-height: 140%; color: #222; word-break: break-all; }
 
 
@@ -229,6 +230,25 @@ footer > p{font-size: 14px; color: #fff; width: 378px;}
   .sectionbox .section1{display: inline-flex; flex-direction: row; width: 80%;}
   
 } */
+
+
+@media screen and (max-width:900px)  {
+/* .card .back .textinfo{width: 94%;}
+.card .back .bookinfo figure{display: none;}
+.card .back .textoutline{display: none;} */
+
+  .card .back .textoutline{-webkit-line-clamp: 4;}
+
+}
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:685px)  {
 
   /* section3 모바일 디자인! */
