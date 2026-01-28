@@ -56,7 +56,7 @@ section:first-child{margin-top: 150px;}
 section{margin-top: 120px;}
 section:last-child{margin-bottom: 150px;}
 
-.section1{display: flex; justify-content: space-between; flex-wrap: wrap; gap: 50px;}
+.section1{display: flex; justify-content: space-between; flex-wrap: wrap; gap:50px; flex-grow: 1;}
 /* 반응형 하면서 fw:w, gap:50px 추가함 */
 .section1 .mains1-1{width: 297px;}
 .section1 > .mains1-1 > .s1title{font-size: 22px; font-weight: 600; display: flex; align-items: center; justify-content: space-between; padding-bottom: 8px;}
@@ -82,6 +82,7 @@ section:last-child{margin-bottom: 150px;}
 
 .section1 .mains1-3 .lineLeft{display: flex; flex-direction: column;}
 .section1 .mains1-3 .lineLeft .divide{font-size: 12px; color: #333;}
+.section1 .mains1-3 .lineLeft span:last-child{overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 .section1 .mains1-3 .lineRight{font-size: 12px; padding: 3px 11px; background: #F3F3F3; border-radius: 4px;}
 .section1 .mains1-3 .lineRight > a{color: #5a6169;}
 .section1 .mains1-3 .lineRight.ing{background: #EE741E;}
@@ -95,7 +96,7 @@ section:last-child{margin-bottom: 150px;}
 
 
 
-.section2{width: 100%; /* min-height: 400; aspect-ratio: 1920/605; *//*  height: clamp(400px,45vw,605px); */ background: url(../img/main/section2_bg.png); display: flex; align-items: center; flex-direction: column; padding-bottom: 2.6vw;}
+.section2{width: 100%; /* min-height: 400; aspect-ratio: 1920/605; *//*  height: clamp(400px,45vw,605px); */ background: url(../img/main/section2_bg.png); display: flex; align-items: center; flex-direction: column; padding-bottom: 2.6vw; }
 .s2title{text-align: center; padding:2.9vw 0 2vw;}
 /* .togglebox{display: flex; gap: 10px; position: absolute; top: -60px; right: 5px; cursor: pointer;} */
 .position{position: relative;}   
@@ -115,12 +116,12 @@ backface-visibility: hidden; transition: .3s; position: absolute; top: 0; left: 
 .card .front > figure{height: 90%; width: auto; }
 .card .front > figure > img{height: 100%;}
 
-.card .back{backface-visibility: hidden; transition: .3s; position: absolute; top: 0; left: 0;  margin: 18px 0 0 19px;  transform: rotateY(180deg); width: 100%;}
+.card .back{backface-visibility: hidden; transition: .3s; position: absolute; top: 0; left: 0;  padding:  18px 0 0 19px;  transform: rotateY(180deg); width: 100%; box-sizing: border-box;}
 .card .back .bookinfo{display: flex; gap: 9px; width: 88%;}
 .card .back .bookinfo figure{width: 83px; height: auto; display: flex; justify-content: center; align-items: center;}
 .card .back .bookinfo figure img{width: 100%; height: auto;}
 .card .back .bookinfo .textinfo{width: calc(100% - 92px);}
-.card .back .bookinfo .textinfo .line{font-size: 14px;margin-bottom: 5px; display: flex; gap: 10px; width: 100%;  }
+.card .back .bookinfo .textinfo .line{font-size: 14px;margin-bottom: 5px; display: flex; column-gap: 10px; width: 100%;  }
 .card .back .bookinfo .textinfo .line:first-child{font-size: 16px; font-weight: 600;}
 .card .back .bookinfo .textinfo .line:nth-child(2){margin-top: 2px;}
 .card .back .bookinfo .textinfo .line span{display: block;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
@@ -132,7 +133,7 @@ backface-visibility: hidden; transition: .3s; position: absolute; top: 0; left: 
 
 
 .section3{display: flex; min-height: 150px; gap: 5px;}
-.section3 .s3left{width: 350px; background: #ee741e; padding: 15px 20px 11px 80px; display: flex; flex-direction: column; align-items: end; box-sizing: border-box;}
+.section3 .s3left{width: 350px; background: #ee741e; padding: 0.78vw 20px 5.7vw 4.16vw; display: flex; flex-direction: column; align-items: end; box-sizing: border-box;}
 .section3 .s3left .s3title{font-size: 25px; font-weight: lighter; color: #fff; flex-grow: 1;}
 .section3 .s3left .s3desc{font-size: 16px; color: #fffcfa; margin: 4px 0; text-align: right;}
 
@@ -145,7 +146,7 @@ backface-visibility: hidden; transition: .3s; position: absolute; top: 0; left: 
 
 
 .s4title{text-align: center; margin-bottom: 40px;}
-.section4 .grid{display: grid; grid-template-columns:1fr 1.3fr 1.3fr 1.3fr; grid-template-rows: 180px 150px 166px ; gap:20px;}
+.section4 .grid{display: grid; grid-template-columns:1fr 1.3fr 1.3fr 1.3fr; grid-template-rows: 180px 150px 166px ; gap:1vw;}
 
   /* 여기하는 중 */
 .section4 .grid li:nth-child(1){grid-row: span 2; background: #EE741E; box-shadow:0 2px 2px rgba(0, 0, 0, 0.25);}
@@ -181,15 +182,12 @@ footer > p{font-size: 14px; color: #fff; width: 378px;}
 
   .hero .searchbox{display:none;}
 
-  .section1 .mains1-2::before{height: 220px; width:0; background: #e3e3e3; position: absolute; bottom: 0; left:-1.8vw}
-  .section1 .mains1-2::after{height: 220px; width: 0; background: #e3e3e3; position: absolute; bottom: 0; right: -1.8vw;}
+  .section1 .mains1-2::before{width: 0;}
+  .section1 .mains1-2::after{width: 0;}
 
-  .section1{/* border: 1px solid #000; */ justify-content: center;}
-  /* .section1  > * {border: 1px solid #000;} */
-  .section1 .mains1-3{}
-  /* 점심후 수정하기
-      섹션1의 내려간 last-child 위치 first-child랑 같은 x축선상 위치
-      */
+  .section1{justify-content: center;}
+
+
   
 
   .section2{width: 100vw;}
@@ -237,7 +235,23 @@ footer > p{font-size: 14px; color: #fff; width: 378px;}
 .card .back .bookinfo figure{display: none;}
 .card .back .textoutline{display: none;} */
 
-  .card .back .textoutline{-webkit-line-clamp: 4;}
+  .card .back .textoutline{-webkit-line-clamp: 5;}
+
+}
+
+
+
+
+@media screen and (max-width:780px)  {
+
+.card{border: 1px solid black;}
+.card .back{width: 100%; height: 100%;}
+.card .back .bookinfo .textinfo{width: 100%; }
+.card .back .bookinfo figure{display: none;}
+.card .back .textoutline{display: none;}
+.card .back .bookinfo .textinfo .line:first-child span{overflow: hidden;  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; white-space: normal; word-break: break-all;}
+.card .back .bookinfo .textinfo .line:last-child{display: flex; flex-wrap: wrap; row-gap: 2px;}
+/* .card .back .bookinfo .textinfo .line span:last-child{text-indent: 2px;} */
 
 }
 
@@ -247,13 +261,12 @@ footer > p{font-size: 14px; color: #fff; width: 378px;}
 
 
 
-
-
 @media screen and (max-width:685px)  {
+
 
   /* section3 모바일 디자인! */
 
-  .s2title{text-align:left; padding:56px 0 40px 70px; width: 100%;}
+  .s2title{text-align:left; padding:2.91vw 0 2vw 70px; width: 100%;}
 /*   .section2{padding-bottom: 110px;}
   .togglebox{display: flex; gap: 10px; position: absolute; top:auto; bottom: -60px; right: 5px; cursor: pointer;} */
 
@@ -261,7 +274,10 @@ footer > p{font-size: 14px; color: #fff; width: 378px;}
 .card .back{border: 1px solid red;}
 .card .back .textinfo{width: 94%;}
 .card .back .bookinfo figure{display: none;}
+.card .back .textinfo .line span:first-child{display: none;}
 .card .back .textoutline{display: none;}
+/* 
+.card .back .bookinfo .textinfo .line{font-size: 14px;margin-bottom: 5px; display: flex; column-gap: 10px; width: 100%;  } */
 
 
 
@@ -280,6 +296,17 @@ position: relative; bottom: 0; right: 0;}
 .section4 .grid > li:nth-child(4) a{background: rgba(0, 0, 0, 0.4);}
 .section4 .grid > li:nth-child(5) a{background: rgba(0, 0, 0, 0.4); color: #fff;}
 
+}
+
+
+@media screen and (max-width:450px)  {
+/* .section_title{font-size: 18px;}
+.s2title{padding:24px 0 12px 70px;}
+.cardBox .card .back .textinfo .line{margin-bottom: 2px;} */
+.card:hover .front{transform: rotateY(0deg);}
+.card .back{display: none;}
+.section3 .s3left .s3title{font-size: 22px;}
+.section3 .s3right .s3title{font-size: 22px;}
 }
 
 
