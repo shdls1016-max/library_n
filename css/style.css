@@ -8,6 +8,9 @@
 .light{font-weight: lighter;}
 .bold{font-weight: bold;}
 .section_title{font-size: 25px; font-weight: 600;}
+.ml10{margin-left: 10px; box-sizing: border-box;}
+.ml20{margin-left: 20px; box-sizing: border-box;}
+.pl10{padding-left: 10px; box-sizing: border-box;}
 
 .wrap{max-width: 1920px; position: relative; margin: 0 auto;}  /* !! poa기준1 !! */
 
@@ -50,14 +53,27 @@ padding: 20px 50px;}
 }
 .hero .searchbox > button{border: none; background: transparent; cursor: pointer; margin-left: 15px; width: 40px;}   
 
+.section1{width: 100%; border: 1px solid #000; display: flex; justify-content: space-between; flex-grow: 1; flex-wrap: wrap; gap: 30px;}
+.mains1-1{width: 30%; border: 1px solid red; flex-grow: 1;}
+.mains1-2{width: 30%; border: 1px solid red; flex-grow: 1;}
+.mains1-3{width: 30%; border: 1px solid red; flex-grow: 1;}
+
+.mains1-1 .s1title{font-size: 22px; font-weight: 600; padding-bottom: 23px; }
+.mains1-2 .s1title{font-size: 22px; font-weight: 600; padding-bottom: 8px;}
+.mains1-3 .s1title{font-size: 22px; font-weight: 600; padding-bottom: 8px;}
+
+.mains1-1 .line{display: flex; justify-content: space-between; align-items: end; background: yellow;}
+.mains1-1 .line .lineLeft{display: flex; flex-direction: column; border: 1px solid #000; width: 70%;}
+.mains1-1 .line .lineLeft span.divide{font-size: 12px; font-weight: 400; color: #333;}
+.mains1-1 .line .lineLeft span:last-child{white-space: nowrap; text-overflow: ellipsis; overflow: hidden; width: 100%; background: tan; }
 
 
-section:first-child{margin-top: 150px;}
+
+/* section:first-child{margin-top: 150px;}
 section{margin-top: 120px;}
 section:last-child{margin-bottom: 150px;}
 
 .section1{display: flex; justify-content: space-between; flex-wrap: wrap; gap:50px; flex-grow: 1;}
-/* 반응형 하면서 fw:w, gap:50px 추가함 */
 .section1 .mains1-1{width: 297px;}
 .section1 > .mains1-1 > .s1title{font-size: 22px; font-weight: 600; display: flex; align-items: center; justify-content: space-between; padding-bottom: 8px;}
 .section1 > .mains1-1 > .s1title::after{content: ''; display: inline-block; width: 26px; height: 26px; background: url(../img/arrowRight.png); background-size: cover; cursor: pointer;}
@@ -89,7 +105,7 @@ section:last-child{margin-bottom: 150px;}
 .section1 .mains1-3 .lineRight.ing > a{color: #fff; font-weight: 600;}
 
 .section1 .mains1-3 .lineRight.ing:hover{background: #F68433;}
-
+ */
 
 
 
