@@ -24,24 +24,24 @@ header .hd1 span.sns .btn{display: inline-block; width:13px; height: 13px; margi
 header .hd1 > ul{display: flex; gap: 20px; font-size: 15px; }
 header .hd2{max-width: 1060px; text-align: center; margin:1px 0 47px;}
 header .hd2 > img{width: 142px;}
-header .hd2 .reactHamburger{display: none;}  /* 반응형하며 추가함 */
+
 
 
 header .hd3 .gnb{display: flex; justify-content: space-between; font-size: 18px; }
 
-header .hd3 .gnb > .lnbbgbox{position: absolute; width:100%; height: 310px; z-index: 2; left: 0; top: 181px; transition: 0.3s; visibility: hidden;}
+header .hd3 > .lnbbgbox{position: absolute; width:100%; height: 310px; z-index: 2; left: 0; top: 181px; transition: 0.3s; visibility: hidden;}
 
 header .hd3 .gnb > li{position: relative; width: 100%;}  /* !! poa기준2 !! */
-header .hd3 .gnb > li > a{display: inline-block; padding:0 30px 20px; transition: 0.3s;}
+header .hd3 .gnb > li > a{display: inline-block; padding:0 30px 20px; transition: 0.3s; /* box-sizing: border-box; */}
 header .hd3 .gnb > li:first-child > a{padding-left: 0;}
 
-header .hd3 .gnb > li > .lnb{position: absolute; top: 25px; left: 0; z-index: 5; height: 0; overflow: hidden; display: flex; flex-direction: column; width: 100%; visibility: hidden; transition: 0.2s;}
+header .hd3 .gnb > li > .lnb{position: absolute; top: 25px; left: 0; z-index: 5; height: 0; overflow: hidden; display: flex; flex-direction: column; width: 100%; visibility: hidden; transition: 0.1s;}
 header .hd3 .gnb > li > .lnb > li > a{font-size: 15px; padding-top:10px; display: inline-block; width: 100%; padding-left: 30px;}
 header .hd3 .gnb > li:first-child > .lnb > li > a{padding-left: 0;}
 header .hd3 .gnb > li > .lnb > li:first-child{margin-top: 20px;}
 
-header .hd3 .gnb:hover > li > .lnb{height: 290px; visibility: visible; transition: 0.3s;}
-header .hd3 .gnb:hover > .lnbbgbox{height: 290px;  background: #fff; transition: 0.3s; visibility: visible;}
+header .hd3 .gnb:hover > li > .lnb{height: 290px; visibility: visible; }
+header .hd3 .gnb:hover ~ .lnbbgbox{height: 290px;  background: #fff; transition: 0.3s; visibility: visible;}
 header .hd3 .gnb:hover  li  a{color: #555;}
 header .hd3 .gnb > li:hover > a{color: orangered;  border-bottom: 1px solid orangered;} 
 header .hd3 .gnb > li > .lnb > li:hover > a{color: orange}
@@ -220,19 +220,19 @@ footer > p{font-size: 14px; color: #fff; width: 378px;}
   .centerbox{/* margin: 0 auto; */ margin-left: 20px; margin-right: 20px;}
   .mo{display: inline-block;}
   .pc{display: none;}
-
+  
+  body.no-scroll{overflow: hidden; height: 100vh;}
 
   header{}
   header .hd1 > ul{display: none;}
   header .hd2{position: relative;}
-  header .hd2 .reactHamburger{position: absolute; cursor: pointer; left: 5px; bottom: -3px; display: inline-block;}
-  /* header .hd2 > img{width: 142px;}   > 로고크기 */
+
 
 
 
   
-  header .hd3{position: absolute; left: 0; top: 0; background: #fff; width: 100%; height: 100vh; z-index: 1;}
-  .hamburger.mo{width: 32px; height: 32px; border: 1px solid #000; position: absolute; left: 20px; top: 20px; cursor: pointer; z-index: 10;}
+  header .hd3.on{position: absolute; left: 0; top: 0; background: #fff; width: 100%; height: 100vh; z-index: 1;}
+  .hamburger.mo{width: 32px; height: 32px; position: absolute; left: 20px; top: 20px; cursor: pointer; z-index: 10;}
   .hamburger.mo span{width: 24px; height: 2px; background: #111; display: inline-block; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
   .hamburger.mo span::before,
   .hamburger.mo span::after
@@ -243,11 +243,34 @@ footer > p{font-size: 14px; color: #fff; width: 378px;}
   .hamburger.mo.on span::before{transform: rotate(45deg); }
   .hamburger.mo.on span::after{transform: rotate(-45deg); }
 
-  header .hd3 .gnb.pc{flex-direction: column; position: absolute; top: 78px; width: 100%;}
+/*   header .hd3 .gnb.pc{flex-direction: column; position: absolute; top: 78px; width: 100%;} */
+  header .hd3 {display: flex; flex-direction: column; justify-content: space-between;}
+  header .hd3 .gnb.pc{display: none;}
+  header .hd3 .gnb.on{flex-direction: column; padding-top: 78px; width: 100%; }
+  header .hd3 .gnb.on > li{display: block; padding-left: 20px; }
+  header .hd3 .gnb > li > a{display: block; padding-left: 0; padding-right: 0; padding-bottom: 8px; box-sizing: border-box; width: 90%;}
+  header .hd3 .gnb > li > .lnb{position: static; top: 0;
+  max-height: 0; overflow: hidden; transition: max-height .3s ease;}
+  header .hd3 .gnb > li > .lnb > li > a{ }
+  header .hd3 .gnb > li > .lnb > li:first-child{margin-top: 8px;}
 
-  header .hd3 .gnb > li{display: block; border: 1px solid #000;}
-  header .hd3 .gnb > li > a{display: block; padding-left: 0;}
 
+  header .hd3 .gnb > li:hover > .lnb{max-height: 260px; visibility: visible; transition: 0.3s;}
+
+
+
+  /* header .hd3 .gnb > li:hover > a{color: orangered;  border-bottom: 1px solid orangered;} */ 
+/* 
+header .hd3 .gnb > li > .lnb{position: absolute; top: 25px; left: 0; z-index: 5; height: 0; overflow: hidden; display: flex; flex-direction: column; width: 100%; visibility: hidden; transition: 0.2s;}
+header .hd3 .gnb > li > .lnb > li > a{font-size: 15px; padding-top:10px; display: inline-block; width: 100%; padding-left: 30px;}
+header .hd3 .gnb > li:first-child > .lnb > li > a{padding-left: 0;}
+header .hd3 .gnb > li > .lnb > li:first-child{margin-top: 20px;} */
+
+
+
+
+  header .hd3 .mo.loginset{display: none;}
+  header .hd3 .loginset.on{display: flex; justify-content: center; margin-top: 40px; gap: 24px; padding-bottom: 40px;}
 
   .hero .searchbox{display:none;}
 
