@@ -4,18 +4,20 @@
 
 .targetGnb{color: orangered;}
 .centerbox{/* margin: 0 auto; */ margin-left: auto;  margin-right: auto; max-width: 1048px;}
+.mo{display: none;}
+.pc{display: inline-block;}
 
 .light{font-weight: lighter;}
 .bold{font-weight: bold;}
 .section_title{font-size: 25px; font-weight: 600;}
 
 
-.wrap{max-width: 1920px; position: relative; margin: 0 auto;}  /* !! poa기준1 !! */
+.wrap{width: 100%; position: relative; margin: 0 auto; }  /* !! poa기준1 !! */
 
 header{max-width: 1060px; margin: 0 auto;}
-header .hd1{display: flex; justify-content: space-between; margin-top: 15px;}
+header .hd1{display: flex; justify-content: end; padding-top: 15px;}
 
-header .hd1 span.sns{border: 1px solid #D0D0D0; padding:4px 3px 6px 8px; border-radius: 8px; font-size: 15px; display: flex; align-items: center;}
+/* header .hd1 span.sns{border: 1px solid #D0D0D0; padding:4px 3px 6px 8px; border-radius: 8px; font-size: 15px; display: flex; align-items: center;} */
 /* header .hd1 span.sns::after{content: ''; display: inline-block; width:13px; height: 13px; margin-left:4px; margin-bottom: -4px; background-image: url(../img/chevronRightHeader.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;} */
 header .hd1 span.sns .btn{display: inline-block; width:13px; height: 13px; margin-left:4px; margin-bottom: -4px; background-image: url(../img/chevronRightHeader.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;}
 
@@ -23,6 +25,8 @@ header .hd1 > ul{display: flex; gap: 20px; font-size: 15px; }
 header .hd2{max-width: 1060px; text-align: center; margin:1px 0 47px;}
 header .hd2 > img{width: 142px;}
 header .hd2 .reactHamburger{display: none;}  /* 반응형하며 추가함 */
+
+
 header .hd3 .gnb{display: flex; justify-content: space-between; font-size: 18px; }
 
 header .hd3 .gnb > .lnbbgbox{position: absolute; width:100%; height: 310px; z-index: 2; left: 0; top: 181px; transition: 0.3s; visibility: hidden;}
@@ -214,16 +218,36 @@ footer > p{font-size: 14px; color: #fff; width: 378px;}
 
 @media screen and (max-width:1100px){
   .centerbox{/* margin: 0 auto; */ margin-left: 20px; margin-right: 20px;}
-
+  .mo{display: inline-block;}
+  .pc{display: none;}
 
 
   header{}
+  header .hd1 > ul{display: none;}
   header .hd2{position: relative;}
   header .hd2 .reactHamburger{position: absolute; cursor: pointer; left: 5px; bottom: -3px; display: inline-block;}
   /* header .hd2 > img{width: 142px;}   > 로고크기 */
 
-  header .hd3 .gnb{display: none;}
-  header .hd3 .gnb > li:first-child{margin-left: 2vw;}
+
+
+  
+  header .hd3{position: absolute; left: 0; top: 0; background: #fff; width: 100%; height: 100vh; z-index: 1;}
+  .hamburger.mo{width: 32px; height: 32px; border: 1px solid #000; position: absolute; left: 20px; top: 20px; cursor: pointer; z-index: 10;}
+  .hamburger.mo span{width: 24px; height: 2px; background: #111; display: inline-block; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+  .hamburger.mo span::before,
+  .hamburger.mo span::after
+  {content: ''; width: 100%; height: 100%; background: #111; position: absolute; left: 0; transition: .3s;}
+  .hamburger.mo span::before{transform: translateY(-8px);}
+  .hamburger.mo span::after{transform: translateY(8px);}
+  .hamburger.mo.on span{background: transparent;}
+  .hamburger.mo.on span::before{transform: rotate(45deg); }
+  .hamburger.mo.on span::after{transform: rotate(-45deg); }
+
+  header .hd3 .gnb.pc{flex-direction: column; position: absolute; top: 78px; width: 100%;}
+
+  header .hd3 .gnb > li{display: block; border: 1px solid #000;}
+  header .hd3 .gnb > li > a{display: block; padding-left: 0;}
+
 
   .hero .searchbox{display:none;}
 
@@ -331,6 +355,9 @@ section:last-child{margin-bottom: 120px;}
 .mains1-1 .s1title{font-size: 20px;}
 .mains1-2 .s1title{font-size: 20px;}
 .mains1-3 .s1title{font-size: 20px;}
+
+header .hd2 > a > img{width: 100px;}
+
 
   /* section3 모바일 디자인! */
 
