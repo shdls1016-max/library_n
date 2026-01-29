@@ -8,9 +8,7 @@
 .light{font-weight: lighter;}
 .bold{font-weight: bold;}
 .section_title{font-size: 25px; font-weight: 600;}
-.ml10{margin-left: 10px; box-sizing: border-box;}
-.ml20{margin-left: 20px; box-sizing: border-box;}
-.pl10{padding-left: 10px; box-sizing: border-box;}
+
 
 .wrap{max-width: 1920px; position: relative; margin: 0 auto;}  /* !! poa기준1 !! */
 
@@ -53,26 +51,49 @@ padding: 20px 50px;}
 }
 .hero .searchbox > button{border: none; background: transparent; cursor: pointer; margin-left: 15px; width: 40px;}   
 
-.section1{width: 100%; border: 1px solid #000; display: flex; justify-content: space-between; flex-grow: 1; flex-wrap: wrap; gap: 30px;}
-.mains1-1{width: 30%; border: 1px solid red; flex-grow: 1;}
-.mains1-2{width: 30%; border: 1px solid red; flex-grow: 1;}
-.mains1-3{width: 30%; border: 1px solid red; flex-grow: 1;}
+.section1{width: 100%; display: flex; justify-content: space-between;/*  flex-grow: 1; flex-wrap: wrap; */ gap: 50px;}
+.mains1-1{width: 30%; flex-grow: 1;}
+.mains1-2{width: 30%; flex-grow: 1;}
+.mains1-3{width: 30%; flex-grow: 1;}
 
-.mains1-1 .s1title{font-size: 22px; font-weight: 600; padding-bottom: 23px; }
-.mains1-2 .s1title{font-size: 22px; font-weight: 600; padding-bottom: 8px;}
-.mains1-3 .s1title{font-size: 22px; font-weight: 600; padding-bottom: 8px;}
+.mains1-1 .s1title{font-size: 22px; font-weight: 600; margin-bottom: 23px; display: block; display: flex; justify-content: space-between; align-items: center; }
+.mains1-2 .s1title{font-size: 22px; font-weight: 600; margin-bottom: 38px; display: block; display: flex; justify-content: space-between; align-items: center;}
+.mains1-3 .s1title{font-size: 22px; font-weight: 600; margin-bottom: 23px; display: block; display: flex; justify-content: space-between; align-items: center;}
 
-.mains1-1 .line{display: flex; justify-content: space-between; align-items: end; background: yellow;}
-.mains1-1 .line .lineLeft{display: flex; flex-direction: column; border: 1px solid #000; width: 70%;}
+.mains1-1 .line{display: flex; justify-content: space-between; align-items: end; margin-bottom: 17px;}
+.mains1-1 .line:last-child{margin-bottom: 0;}
+.mains1-1 .line .lineLeft{display: flex; flex-direction: column; width: 70%;}
 .mains1-1 .line .lineLeft span.divide{font-size: 12px; font-weight: 400; color: #333;}
-.mains1-1 .line .lineLeft span:last-child{white-space: nowrap; text-overflow: ellipsis; overflow: hidden; width: 100%; background: tan; }
+.mains1-1 .line .lineLeft span:last-child{white-space: nowrap; text-overflow: ellipsis; overflow: hidden; width: 100%;}
+.section1 > .mains1-1 > .s1title::after{content: ''; display: inline-block; width: 26px; height: 26px; background: url(../img/arrowRight.png); background-size: cover; cursor: pointer;}
+
+.mains1-2{}
+.mains1-2 > .line{margin-bottom: 33px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.section1 > .mains1-2 > .s1title::after{content: ''; display: inline-block; width: 26px; height: 26px; background: url(../img/arrowRight.png); background-size: cover; cursor: pointer;}
+
+.section1 .mains1-2::before{content: ''; height: 220px; width: 1px; background: red; position: absolute; bottom: 0; left:-1.8vw}
+.section1 .mains1-2::after{content: ''; height: 220px; width: 1px; background: #e3e3e3; position: absolute; bottom: 0; right: -1.8vw;}
 
 
+.mains1-3 .line{display: flex; justify-content: space-between; align-items: end; margin-bottom: 17px;}
+.mains1-3 .line:last-child{margin-bottom: 0;}
+.mains1-3 .line .lineLeft{display: flex; flex-direction: column; width: 70%;}
+.mains1-3 .line .lineLeft span.divide{font-size: 12px; font-weight: 400; color: #333;}
+.mains1-3 .line .lineLeft span:last-child{white-space: nowrap; text-overflow: ellipsis; overflow: hidden; width: 100%;}
 
-/* section:first-child{margin-top: 150px;}
+.section1 .mains1-3 .lineRight{font-size: 12px; padding: 3px 11px; background: #F3F3F3; border-radius: 4px;}
+.section1 .mains1-3 .lineRight > a{color: #5a6169;}
+.section1 .mains1-3 .lineRight.ing{background: #EE741E;}
+.section1 .mains1-3 .lineRight.ing > a{color: #fff; font-weight: 600;}
+.section1 > .mains1-3 > .s1title::after{content: ''; display: inline-block; width: 26px; height: 26px; background: url(../img/arrowRight.png); background-size: cover; cursor: pointer;}
+
+.section1 .mains1-3 .lineRight.ing:hover{background: #F68433;}
+
+
+section:first-child{margin-top: 150px;}
 section{margin-top: 120px;}
 section:last-child{margin-bottom: 150px;}
-
+/* 
 .section1{display: flex; justify-content: space-between; flex-wrap: wrap; gap:50px; flex-grow: 1;}
 .section1 .mains1-1{width: 297px;}
 .section1 > .mains1-1 > .s1title{font-size: 22px; font-weight: 600; display: flex; align-items: center; justify-content: space-between; padding-bottom: 8px;}
@@ -185,9 +206,13 @@ footer > p{font-size: 14px; color: #fff; width: 378px;}
 
 
 
-
+/* -----------반응형---------- */
 
 @media screen and (max-width:1100px){
+  .centerbox{/* margin: 0 auto; */ margin-left: 20px; margin-right: 20px;}
+
+
+
   header{}
   header .hd2{position: relative;}
   header .hd2 .reactHamburger{position: absolute; cursor: pointer; left: 5px; bottom: -3px; display: inline-block;}
@@ -198,15 +223,22 @@ footer > p{font-size: 14px; color: #fff; width: 378px;}
 
   .hero .searchbox{display:none;}
 
+  .section1{flex-wrap: wrap; column-gap: 4.16vw; width: calc(100% - 40px); align-items: start; }
+  .mains1-1{width: 40%; flex-grow: 1;}
+  .mains1-2{width: 40%; flex-grow: 1;}
+  .mains1-3{width: 40%; flex-grow: 1;}
+
   .section1 .mains1-2::before{width: 0;}
   .section1 .mains1-2::after{width: 0;}
+
+  .mains1-1 .line .lineLeft{width: 80%;}
 
   .section1{justify-content: center;}
 
 
   
 
-  .section2{width: 100vw;}
+  .section2{width: 100%;}
   .section2 .cardBox{width: 90vw;}
   .section2 .cardBox .card{width: 30vw; height: auto;}
   .section2 .cardBox .card img{/* width: 80%; */}
@@ -269,6 +301,14 @@ footer > p{font-size: 14px; color: #fff; width: 378px;}
 .card .back .bookinfo .textinfo .line:last-child{display: flex; flex-wrap: wrap; row-gap: 2px;}
 /* .card .back .bookinfo .textinfo .line span:last-child{text-indent: 2px;} */
 
+
+.section1{row-gap: 5vw;}
+.mains1-1{width: 60%; flex-grow: 1;}
+.mains1-2{width: 60%; flex-grow: 1;}
+.mains1-3{width: 60%; flex-grow: 1;}
+
+.mains1-2 .s1title{margin-bottom:23px;}
+.mains1-2 > .line{margin-bottom: 17px;}
 }
 
 
