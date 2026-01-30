@@ -260,19 +260,7 @@ footer > p{font-size: 14px; color: #fff; width: 378px;}
   header .hd3 .gnb > li > .lnb > li > a{ }
   header .hd3 .gnb > li > .lnb > li:first-child{margin-top: 8px;}
 
-
-  header .hd3 .gnb > li:hover > .lnb{max-height: 300px; visibility: visible; transition: 0.3s;}
-
-
-
-  /* header .hd3 .gnb > li:hover > a{color: orangered;  border-bottom: 1px solid orangered;} */ 
-/* 
-header .hd3 .gnb > li > .lnb{position: absolute; top: 25px; left: 0; z-index: 5; height: 0; overflow: hidden; display: flex; flex-direction: column; width: 100%; visibility: hidden; transition: 0.2s;}
-header .hd3 .gnb > li > .lnb > li > a{font-size: 15px; padding-top:10px; display: inline-block; width: 100%; padding-left: 30px;}
-header .hd3 .gnb > li:first-child > .lnb > li > a{padding-left: 0;}
-header .hd3 .gnb > li > .lnb > li:first-child{margin-top: 20px;} */
-
-
+  header .hd3 .gnb > li:hover > .lnb{max-height: 300px;  visibility: visible; transition: 0.3s;}
 
 
   header .hd3 .mo.loginset{display: flex;
@@ -319,7 +307,7 @@ header .hd3 .gnb > li > .lnb > li:first-child{margin-top: 20px;} */
  */
   
 
-  /* .section3{flex-wrap: wrap; height: auto;  justify-content: center; gap: 10px;} */
+  /
   .section3{flex-direction: column; height: auto;  align-items: center; gap: 10px;}
   .section3 .s3left{width: 690px; }
   .section3 .s3right{min-height: 150px; width: 690px; flex-grow: 0;}
@@ -328,13 +316,6 @@ header .hd3 .gnb > li > .lnb > li:first-child{margin-top: 20px;} */
   .section4 .grid li{width: 40vw; height: 155px;}
 
 }
-
-/* @media screen and (max-width:1008px)  {
-
-  .sectionbox {display: flex; flex-direction: column; justify-content: center;}
-  .sectionbox .section1{display: inline-flex; flex-direction: row; width: 80%;}
-  
-} */
 
 
 @media screen and (max-width:900px)  {
@@ -345,9 +326,8 @@ header .hd3 .gnb > li > .lnb > li:first-child{margin-top: 20px;} */
   .card .back .textoutline{-webkit-line-clamp: 5;}
 
 
-  /* ----------sub--------- */
-  form.sub select#standard{font-size: 16px;}
-  form.sub select#standard option{font-size: 16px;}
+ 
+ 
 }
 
 
@@ -524,8 +504,9 @@ ul.lnb_sibling > li.present_lnb > a{color:#fff; transform: translateY(-5px); dis
 .page_name > figure > img{width: 29px; margin-top: 8px; margin-left: 10px;}
 
 form.sub{display: inline-block; position: absolute; top: 60px; right: 6px; transform: translateY(-100%);}   /* 여기수정중! 버튼모양변경하기 */
-form.sub #standard{padding:8px 8px 8px 10px; font-size: 20px; font-family: "Inter", sans-serif; border-radius:5px; border: 1px solid #B7B7B7; }
-form.sub #standard option{font-size: 18px;}
+form.sub #standard{padding:4px 4px 4px 5px; font-size: 16px; font-family: "Inter", sans-serif; border-radius:5px; border: 1px solid #B7B7B7; }
+form.sub #standard option{font-size: 15px;}
+
 
 
 .contentList li{display: flex; /* width: 1600px; */ width: 100%; border-bottom: 1px solid #E3E3E3; padding: 23px 0 50px;}
