@@ -18,6 +18,7 @@ $('.hamburger').click(function(){
     $('.hd3').toggleClass('on');
     $('.hd3 .gnb').toggleClass('pc')
     $('.hd3 .gnb').toggleClass('on');
+    $('.hd3 .loginset').toggleClass('on');
 
     if($('.hd3').hasClass('on')){
         $('body').addClass('no-scroll');
