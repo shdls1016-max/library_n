@@ -230,7 +230,8 @@ footer > p{font-size: 14px; color: #fff; width: 378px;}
 
 
 
-  
+  .hd3 .lnbbgbox.pc{display: none;}
+
   header .hd3.on{position: absolute; left: 0; top: 0; background: #fff; width: 100%; height: 100vh; z-index: 1;}
   .hamburger.mo{width: 32px; height: 32px; position: absolute; left: 20px; top: 20px; cursor: pointer; z-index: 10;}
   .hamburger.mo span{width: 24px; height: 2px; background: #111; display: inline-block; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
@@ -244,18 +245,18 @@ footer > p{font-size: 14px; color: #fff; width: 378px;}
   .hamburger.mo.on span::after{transform: rotate(-45deg); }
 
 /*   header .hd3 .gnb.pc{flex-direction: column; position: absolute; top: 78px; width: 100%;} */
-  header .hd3 {display: flex; flex-direction: column; justify-content: space-between;}
+  header .hd3 {display: flex; flex-direction: column; justify-content: space-between; transition: .3s;}
   header .hd3 .gnb.pc{display: none;}
   header .hd3 .gnb.on{flex-direction: column; padding-top: 78px; width: 100%; }
   header .hd3 .gnb.on > li{display: block; padding-left: 20px; }
-  header .hd3 .gnb > li > a{display: block; padding-left: 0; padding-right: 0; padding-bottom: 8px; box-sizing: border-box; width: 90%;}
+  header .hd3 .gnb > li > a{display: block; padding-left: 0; padding-right: 0; padding-bottom: 12px; box-sizing: border-box; width: 90%;}
   header .hd3 .gnb > li > .lnb{position: static; top: 0;
   max-height: 0; overflow: hidden; transition: max-height .3s ease;}
   header .hd3 .gnb > li > .lnb > li > a{ }
   header .hd3 .gnb > li > .lnb > li:first-child{margin-top: 8px;}
 
 
-  header .hd3 .gnb > li:hover > .lnb{max-height: 260px; visibility: visible; transition: 0.3s;}
+  header .hd3 .gnb > li:hover > .lnb{max-height: 300px; visibility: visible; transition: 0.3s;}
 
 
 
@@ -269,8 +270,10 @@ header .hd3 .gnb > li > .lnb > li:first-child{margin-top: 20px;} */
 
 
 
-  header .hd3 .mo.loginset{display: none;}
+  header .hd3 .mo.loginset{display: flex;
+  opacity: 0; /* transition: opacity .2s; */}
   header .hd3 .loginset.on{display: flex; justify-content: center; margin-top: 40px; gap: 24px; padding-bottom: 40px;}
+  header .hd3.on .loginset.on{opacity: 1; transition: opacity .2s; }
 
   .hero .searchbox{display:none;}
 
@@ -414,6 +417,13 @@ position: relative; bottom: 0; right: 0;}
 .section4 .grid > li:nth-child(4) a{background: rgba(0, 0, 0, 0.4);}
 .section4 .grid > li:nth-child(5) a{background: rgba(0, 0, 0, 0.4); color: #fff;}
 
+
+
+
+/* --------sub------------ */
+ul.lnb_sibling{display: none;}
+.page_name{margin-top: 120px;}  
+
 }
 
 
@@ -455,19 +465,22 @@ footer > p{margin-left: 20px;}
 
 
 /* --------------------------sub page ----------------------- */
+
+/* 책제목 처음부터 2줄부터 줄 바꿈되게 pc에서부터 만들기? */
+
 .subpage > li > a{color: #5A6169;}
 li.present_gnb > a{color: #000;}
 .lnb_sibling{display: flex; margin-top: 47px; margin-bottom: 150px;}
-.lnb_sibling > li{display: inline-block; background: #5F4E41; /* padding-right: 67px; */ padding: 19px 67px 17px 0;}
+.lnb_sibling > li{display: inline-block; background: #5F4E41; /* padding-right: 67px; */ padding: 19px 3.48vw 17px 0;}
 .lnb_sibling > li > a{color:#CFCAC6;}
-.lnb_sibling > li:first-child{padding-left: 160px;}
+.lnb_sibling > li:first-child{padding-left: 8.33vw;}
 .lnb_sibling > li:last-child{padding-right:50px;}
 ul.lnb_sibling > li.present_lnb{}
 ul.lnb_sibling > li.present_lnb > a{color:#fff; transform: translateY(-5px); display: inline-block;}
 /* header .hd3 .gnb.subpage > li.present_gnb > ul.lnb > li > a.present_lnb {color: red; border: 1px solid red !important;} */
 
 
-.contentWrap{width: 1600px; position: relative; margin-left: auto; margin-right: auto;}
+.contentWrap{/* max-width: 1600px; */max-width: 83.33vw;  position: relative; margin-left: auto; margin-right: auto;}
 .page_name{font-size: 30px; letter-spacing: -6%; display: flex; padding-left: 21px; margin-bottom: 20px;}
 .page_name > figure > img{width: 29px; margin-top: 8px; margin-left: 10px;}
 
@@ -476,7 +489,7 @@ form #standard{padding:8px 8px 8px 10px; font-size: 20px; font-family: "Inter", 
 form #standard option{font-size: 20px;}
 
 
-.contentList li{display: flex; width: 1600px; border-bottom: 1px solid #E3E3E3; padding: 23px 0 50px;}
+.contentList li{display: flex; /* width: 1600px; */ width: 100%; border-bottom: 1px solid #E3E3E3; padding: 23px 0 50px;}
 .contentList li:first-child{padding-top:53px; border-top: 1px solid #4D4D4D;}  
 .contentList li:last-child{border-bottom: 1px solid #4D4D4D;}
 .contentList li img{width: 150px; margin-left: 32px;}
