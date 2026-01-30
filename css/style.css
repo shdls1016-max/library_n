@@ -259,6 +259,7 @@ footer > p{font-size: 14px; color: #fff; width: 378px;}
   max-height: 0; overflow: hidden; transition: max-height .3s ease;}
   header .hd3 .gnb > li > .lnb > li > a{ }
   header .hd3 .gnb > li > .lnb > li:first-child{margin-top: 8px;}
+  header .hd3 .gnb > li > .lnb > li > a{padding-left: 0;}
 
   header .hd3 .gnb > li:hover > .lnb{max-height: 300px;  visibility: visible; transition: 0.3s;}
 
