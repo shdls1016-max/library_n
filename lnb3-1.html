@@ -10,7 +10,7 @@
    <div class="wrap">
       <header>
           <div class="hd1">
-            <span class="sns">sns <span class="btn"></span></span>
+            <!-- <span class="sns">sns <span class="btn"></span></span> -->
             <ul>
               <li><a href="login.html">로그인</a></li>
               <li><a href="signup.html">회원가입</a></li>
@@ -18,11 +18,15 @@
             </ul>
           </div>
 
-          <div class="hd2"><span class="reactHamburger"><img src="img/hamburger.png" alt="햄버거아이콘"></span><a href="index.html"><img src="img/logo.png" alt="로고"></a></div>
+          <div class="hd2">
+            <!-- <span class="reactHamburger"><img src="img/hamburger.png" alt="햄버거아이콘"></span> -->
+            <a href="index.html"><img src="img/logo.png" alt="로고"></a>
+          </div>
           <!-- 반응형하며 hd2안에 span.reactHamburger 추가함 -->
 
           <div class="hd3">
-            <ul class="gnb subpage">
+            <div class="hamburger mo"><span></span></div>
+            <ul class="gnb pc">
               <li><a href="gnb1-1.html">자료검색</a>
                   <ul class="lnb">
                       <li><a href="lnb1-1.html">자료검색</a></li>
@@ -43,7 +47,7 @@
                       <li><a href="lnb2-7.html">장애인서비스</a></li>
                   </ul>
               </li>
-              <li class="present_gnb"><a href="lnb3-1.html">독서마당</a>
+              <li><a href="lnb3-1.html">독서마당</a>
                   <ul class="lnb">
                       <li><a href="lnb3-1.html">추천도서</a></li>
                       <li><a href="lnb3-2.html">도서공감</a></li>
@@ -98,9 +102,15 @@
                       <li><a href="lnb7-8.html">신청조회</a></li>
                   </ul>
               </li>
-              <div class="lnbbgbox"></div>
+              
+
             </ul>
-            
+            <div class="lnbbgbox pc"></div>
+            <ul class="mo loginset">
+              <li><a href="login.html">로그인</a></li>
+              <li><a href="signup.html">회원가입</a></li>
+              <li><a href="register.html">온라인정회원신청</a></li>
+            </ul>
           </div>
       </header>
   
@@ -224,7 +234,7 @@
       </footer>
 
       <script src="script/jquery-3.7.1.min.js"></script>
-      <script src="action.js"></script>
+      <script src="script/action.js"></script>
 
    </div>
 
