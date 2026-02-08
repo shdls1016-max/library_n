@@ -17,7 +17,7 @@
   100% {opacity: 1;}
   
 }
-.cansub.blink{animation: blink 0.8s ease-in-out 3;}
+.cansub.blink{animation: blink 0.8s ease-in-out 2;}
 
 
 .wrap{width: 100%; position: relative; margin: 0 auto; }  /* !! poa기준1 !! */
@@ -108,40 +108,7 @@ padding:1vw 2.6vw;} /* p20-50이었음 */
 section:first-child{margin-top: 150px;}
 section{margin-top: 120px;}
 section:last-child{margin-bottom: 150px;}
-/* 
-.section1{display: flex; justify-content: space-between; flex-wrap: wrap; gap:50px; flex-grow: 1;}
-.section1 .mains1-1{width: 297px;}
-.section1 > .mains1-1 > .s1title{font-size: 22px; font-weight: 600; display: flex; align-items: center; justify-content: space-between; padding-bottom: 8px;}
-.section1 > .mains1-1 > .s1title::after{content: ''; display: inline-block; width: 26px; height: 26px; background: url(../img/arrowRight.png); background-size: cover; cursor: pointer;}
-.section1 .mains1-1 .line{display: flex; justify-content: space-between; align-items: end; margin-top: 15px; cursor: pointer;}
-.section1 .mains1-1 .lineLeft{display: flex; flex-direction: column;}
-.section1 .mains1-1 .lineLeft .divide{font-size: 12px; color: #333;}
 
-.section1 .mains1-2{width: 294px; position: relative;}
-.section1 > .mains1-2 > .s1title{font-size: 22px; font-weight: 600; display: flex; align-items: center; justify-content: space-between; padding-bottom: 7px;}
-.section1 > .mains1-2 > .s1title::after{content: ''; display: inline-block; width: 26px; height: 26px; background: url(../img/arrowRight.png); background-size: cover; cursor: pointer;}
-.section1 .mains1-2 .line{display: flex; justify-content: space-between; align-items: end; margin-top: 32px; cursor: pointer;}
-
-.section1 .mains1-2::before{content: ''; height: 220px; width: 1px; background: #e3e3e3; position: absolute; bottom: 0; left:-1.8vw}
-.section1 .mains1-2::after{content: ''; height: 220px; width: 1px; background: #e3e3e3; position: absolute; bottom: 0; right: -1.8vw;}
-
-
-.section1 .mains1-3{width: 295px;}
-.section1 > .mains1-3 > .s1title{font-size: 22px; font-weight: 600; display: flex; align-items: center; justify-content: space-between; padding-bottom: 8px;}
-.section1 > .mains1-3 > .s1title::after{content: ''; display: inline-block; width: 26px; height: 26px; background: url(../img/arrowRight.png); background-size: cover; cursor: pointer; cursor: pointer;}
-.section1 .mains1-3 .line{display: flex; justify-content: space-between; align-items: end; margin-top: 15px; cursor: pointer; cursor: pointer;}
-
-
-.section1 .mains1-3 .lineLeft{display: flex; flex-direction: column;}
-.section1 .mains1-3 .lineLeft .divide{font-size: 12px; color: #333;}
-.section1 .mains1-3 .lineLeft span:last-child{overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
-.section1 .mains1-3 .lineRight{font-size: 12px; padding: 3px 11px; background: #F3F3F3; border-radius: 4px;}
-.section1 .mains1-3 .lineRight > a{color: #5a6169;}
-.section1 .mains1-3 .lineRight.ing{background: #EE741E;}
-.section1 .mains1-3 .lineRight.ing > a{color: #fff; font-weight: 600;}
-
-.section1 .mains1-3 .lineRight.ing:hover{background: #F68433;}
- */
 
 
 
@@ -514,6 +481,7 @@ ul.lnb_sibling > li.present_lnb{}
 ul.lnb_sibling > li.present_lnb > a{color:#fff; transform: translateY(-5px); display: inline-block;}
 /* header .hd3 .gnb.subpage > li.present_gnb > ul.lnb > li > a.present_lnb {color: red; border: 1px solid red !important;} */
 
+.lnb_sibling > li:hover > a{color:#fff; transition: .6s;}
 
 .contentWrap{/* max-width: 1600px; */max-width: 83.33vw;  position: relative; margin-left: auto; margin-right: auto;}
 .page_name{font-size: 30px; display: flex; padding-left: 21px; margin-bottom: 20px;}
@@ -547,6 +515,9 @@ overflow: hidden; white-space: normal; display:-webkit-box;   -webkit-line-clamp
 .pagenation > figure{width: 19px; height: 19px; flex-shrink: 0;}
 /* 제미나이가 아이콘이 flex 환경에서 찌그러지지 않게 하기 위해 flex-shrink:0; 주라고 해서 추가함 */
 .pagenation > figure > img{width: 19px; height: 19px;}
-.pagenation .pageNum{padding: 7px 14px; font-weight: 300;}
-.pagenation .pageNum > a{color: #000;}
-.pagenation .presentPage{border-bottom: 1.5px solid #4d4d4d; box-sizing: border-box; font-weight: 400; }
+.pagenation .pageNum{padding: 7px 14px;}
+.pagenation .pageNum > a{color: #111;}
+.pagenation .presentPage{border-bottom: 1.5px solid #4d4d4d; box-sizing: border-box; font-weight: 500; }
+.pagenation:hover .pageNum a{color: #666;}
+.pagenation:hover .presentPage > a{color: #111;}
+.pagenation .pageNum:hover a{color: #111; transition: .4s;}

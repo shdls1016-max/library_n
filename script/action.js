@@ -29,6 +29,8 @@ $('.hamburger').click(function(){
 })
 
 
+//gnb hover시 subpage 알려주는 깜빡이 효과
+
 /* $(function(){
     const $gnb = $('.gnb');
     const $cansub = $('.cansub');
