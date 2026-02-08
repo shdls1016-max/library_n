@@ -27,3 +27,50 @@ $('.hamburger').click(function(){
     }
 
 })
+
+
+/* $(function(){
+    const $gnb = $('.gnb');
+    const $cansub = $('.cansub');
+
+    $gnb.on('mouseenter',function(){
+        $cansub.removeClass('blink');
+
+        $cansub[0].offsetWidth;
+        $cansub.addClass('blink');
+    });
+}); */
+
+
+$(function () {
+  const $gnb = $('.gnb');
+  const $cansub = $('.cansub');
+
+  // cansub 없으면 blink 로직 자체를 실행하지 않음
+  if ($cansub.length === 0) return;
+
+  const $cansubParent = $cansub.closest('.gnb > li');
+
+  function blinkCanSub() {
+    $cansub.removeClass('blink');
+
+    // DOM 존재할 때만 reflow
+    $cansub[0].offsetWidth;
+
+    $cansub.addClass('blink');
+  }
+
+  /* PC */
+  $gnb.on('mouseenter', function () {
+    if (!$('.hamburger.mo').is(':visible')) {
+      blinkCanSub();
+    }
+  });
+
+  /* 모바일(햄버거) */
+  $cansubParent.on('mouseenter', function () {
+    if ($('.hamburger.mo').is(':visible')) {
+      blinkCanSub();
+    }
+  });
+});
