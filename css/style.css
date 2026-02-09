@@ -17,7 +17,7 @@
   100% {opacity: 1;}
   
 }
-.cansub.blink{animation: blink 0.8s ease-in-out 2;}
+.cansub.blink{animation: blink 0.8s ease-in-out 3;}
 
 
 .wrap{width: 100%; position: relative; margin: 0 auto; }  /* !! poa기준1 !! */
@@ -520,4 +520,5 @@ overflow: hidden; white-space: normal; display:-webkit-box;   -webkit-line-clamp
 .pagenation .presentPage{border-bottom: 1.5px solid #4d4d4d; box-sizing: border-box; font-weight: 500; }
 .pagenation:hover .pageNum a{color: #666;}
 .pagenation:hover .presentPage > a{color: #111;}
+
 .pagenation .pageNum:hover a{color: #111; transition: .4s;}
